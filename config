@@ -211,9 +211,9 @@ enable-ipc = true
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
-font-1 = "Font Awesome 5 Free:size=10;0"
-font-2 = "Font Awesome 5 Free Solid:size=10;0"
-font-3 = "Font Awesome 5 Brands:size=10;0"
+font-1 = "FontAwesome:style=Regular:size=10;0" 
+font-2 = "FontAwesome:style=Regular:size=10;0"
+font-3 = "FontAwesome:style=Regular:size=10;0"
 
 modules-left = ewmh xwindow
 modules-center = memory1 cpu1
@@ -863,13 +863,13 @@ adapter = AC0
 full-at = 100
 
 format-charging = <animation-charging> <label-charging>
-label-charging =  %percentage%%
+label-charging =  %percentage%%
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
 format-charging-underline = #a3c725
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging =  %percentage%%
+label-discharging =  %percentage%%
 format-discharging-underline = #c7ae25
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
@@ -887,11 +887,11 @@ ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-foreground = #c7ae25
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
 animation-charging-foreground = #a3c725
 animation-charging-framerate = 750
 
@@ -1323,13 +1323,14 @@ format-background = #668bd7
 [module/pulseaudio]
 type = internal/pulseaudio
 
+
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
 ; sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
-use-ui-max = true
+use-ui-max = false
 
 ; Interval for volume increase/decrease (in percent points)
 ; Default: 5
@@ -1337,15 +1338,15 @@ interval = 5
 
 ; Available tags:
 ;   <label-volume> (default)
-;   <ramp-volume>
+;  <ramp-volume>
 ;   <bar-volume>
 format-volume = <ramp-volume> <label-volume>
 
 ; Available tags:
-;   <label-muted> (default)
+;  <label-muted> (default)
 ;   <ramp-volume>
 ;   <bar-volume>
-;format-muted = <label-muted>
+format-muted = <label-muted>
 
 ; Available tokens:
 ;   %percentage% (default)
@@ -1355,13 +1356,13 @@ format-volume = <ramp-volume> <label-volume>
 ; Available tokens:
 ;   %percentage% (default)
 ;   %decibels%
-label-muted = 🔇 muted
-label-muted-foreground = #666
+label-muted =  muted
+label-muted-foreground = #333
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 🔈
-ramp-volume-1 = 🔉
-ramp-volume-2 = 🔊
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 ; Right and Middle click
 click-right = pavucontrol
