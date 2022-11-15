@@ -4,7 +4,7 @@ N=$(tput sgr0)
 
 echo "${B}###Configuration polybar###${N}"
 
-cp ~/polybar/launch.sh ~/.config/polybar
-chmod +x ~/.config/polybar/launch.sh
+cp ~/polybar_ob/launch.sh ~/.config/polybar
+chmod +x ~/.config/polybar_ob/launch.sh
 
-cp ~/polybar/config ~/.config/polybar
+cp ~/polybar_ob/config ~/.config/polybar
